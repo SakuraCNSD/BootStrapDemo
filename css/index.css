@@ -1,0 +1,237 @@
+html {
+  /* 取默认字体的百分比 */
+  font-size: 62.5%;
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 59%;
+  }
+}
+@media (min-width: 576px) {
+  html {
+    font-size: 56%;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+a:hover {
+  text-decoration: none;
+}
+/* 第一个坑，左侧内容是固定定位，但是固定定位脱离文档流，导致左边和右边内容重叠，可以通过父级，父级row是弹性布局，可以通过弹性布局的水平排列方式处理和leftCon样式 */
+.leftCon {
+  left: 0;
+  top: 0;
+}
+.container-fluid {
+  padding-right: 14px !important;
+}
+@media (max-width: 991.98px) {
+  .leftCon {
+    position: relative !important;
+  }
+  .login {
+    height: auto !important;
+  }
+}
+#showBtn,
+#closeBtn {
+  cursor: pointer;
+}
+.leftCon header {
+  height: 80px;
+}
+.leftCon header ul li {
+  font-size: 2rem;
+}
+.leftCon .icon-ziyuan {
+  cursor: pointer;
+  font-size: 3rem;
+  color: #858585;
+}
+.login {
+  height: calc(100vh - 80px);
+}
+.login .icon-kafei {
+  font-size: 24px;
+  color: #67a4c7;
+}
+.login a {
+  font-size: 1.6rem;
+}
+.register {
+  border-radius: 13px;
+  vertical-align: baseline;
+}
+.menu {
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: 2000;
+  transition: 0.3s;
+}
+.menu.hide {
+  z-index: -1;
+  opacity: 0;
+  transform: scale(1.1);
+}
+.menu.show {
+  opacity: 1;
+  transform: scale(1);
+}
+.menu ul li a {
+  font-size: 2rem;
+}
+.menu .font,
+.menu .btn {
+  font-size: 1.8rem;
+}
+.menu footer {
+  font-size: 1.6rem;
+}
+.menu footer,
+.menu footer a {
+  color: rgba(0, 0, 0, 0.38);
+}
+.menu footer a:nth-of-type(1) {
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+.menu footer a:nth-of-type(2) {
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+/* 右侧样式 */
+#pic .icon-arrow-left-copy,
+#pic .icon-arrow-right {
+  font-size: 6rem;
+}
+#threeImg .enter img {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+#threeImg .enter {
+  transition: 0.3s;
+  transform: translateY(-5px);
+}
+#threeImg .leave {
+  transform: translateY(0);
+}
+#threeImg .entering img {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+.star h2 {
+  font-size: 2.5rem;
+  line-height: 34px;
+}
+.star a {
+  color: #c2a661;
+}
+.star p {
+  font-size: 1.6rem;
+}
+.star button {
+  border-radius: 15px;
+  font-size: 1.8rem;
+}
+.betters h3,
+.teah h3 {
+  font-size: 2.5rem;
+}
+.betters p,
+.teah p {
+  font-size: 1.6rem;
+}
+.betters li {
+  margin-top: 56px;
+}
+.betters li a {
+  transition: 0.2s;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.betters li a img {
+  width: 70%;
+  margin-top: -28px;
+}
+.betters li a h4 {
+  font-size: 1.8rem;
+}
+.betters li a p {
+  font-size: 1.5rem;
+}
+.betters li a p.caption {
+  font-size: 1.3rem;
+  color: #c2a661;
+  opacity: 0.7;
+}
+.betters li a:hover {
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.22);
+  transform: translateY(-5px);
+}
+.teah ul {
+  width: 1216px;
+}
+.teah li {
+  width: 288px;
+}
+.scroll li {
+  transition: 0.2s;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.scroll li span {
+  font-size: 1.4rem;
+  background: #c2a661;
+  left: 0;
+  top: 6px;
+}
+.scroll li:hover {
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+.teah .scroll {
+  transition: 0.8s;
+  transform: translateX(210px);
+}
+.teah .arrow-right {
+  transition: 0.8s;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 15px;
+  vertical-align: middle;
+}
+.teah .arrow-left {
+  transition: 0.8s;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 15px;
+  vertical-align: middle;
+}
+.teah .arrow-right.hide,
+.teah .arrow-left.hide {
+  opacity: 0;
+}
+.teah .scroll.moveLeft {
+  transform: translateX(0);
+}
+.teah .scroll.moveRight {
+  transform: translateX(210px);
+}
+.footer-title span {
+  font-size: 1.6rem;
+}
+.footer ul {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+}
+.footer a span.iconfont {
+  font-size: 2.5rem;
+}
+.footer a.active {
+  color: #00a862 !important;
+}
